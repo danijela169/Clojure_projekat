@@ -18,9 +18,14 @@
   )
 
 
+(defn narudzbine []
+   (view/narudzbine (b/data))
+  )
+
 
 (defroutes my_routes
  (GET "/" [] (pocetnaStr))
+ (GET "/narudzbine" [] (narudzbine))
  (route/resources "/"))
 
 
