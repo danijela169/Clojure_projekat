@@ -1,35 +1,26 @@
 (ns sirupi.core
-  (:use ring.middleware.json 
+ (:use ring.util.json-response 
         ring.adapter.jetty
-        compojure.core
-        [hiccup.element :only (link-to)])
-  (:require [compojure.core :refer [defroutes ANY]]
-            [compojure.route :as route]
+        compojure.core)
+  (:require [ring.middleware.resource :refer [wrap-resource]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
-            [hiccup.page :as h]
-            [hiccup.page :refer [html5 include-css]]
-            ))
-
-(defn izgled []
-  (h/html5
-    [:head
-     [:title "Sirupi za mrsavljenje"]
-     (include-css "/css/bootstrap.css" "/css/style1.css" "/css/bootstrap.min.css" "/css/responsive.css" "/css/style.css" "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
-     ]
-    [:body {:class "homepage"}
-[:p "Prirodnim putem do idealne linije"]
-
-    ]
-  ))
+            [ring.util.response :as ring] 
+            [compojure.route :as route]
+            [compojure.core :refer [defroutes GET POST]]
+            [sirupi.singleView :as view]
+            [sirupi.broker :as b])
+)
 
 
 
-(defroutes mroutes
- (GET "/" [] (izgled))
+(defn pocetnaStr []
+   (view/index )
+  )
+
+
+
+(defroutes my_routes
+ (GET "/" [] (pocetnaStr))
  (route/resources "/"))
-(def app
-  (wrap-defaults mroutes site-defaults))
-
-
 
 

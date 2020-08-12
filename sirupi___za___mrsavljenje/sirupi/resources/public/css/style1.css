@@ -1,0 +1,27 @@
+#footer{
+position: absolute;
+}
+#narudzbine{padding-top: 50px;
+ padding-bottom: 50px;
+ }
+ #dodajNarudzbinu{
+ padding-top: 100px;
+ padding-bottom: 50px;
+ }
+ #narudzbina{
+  padding-top: 100px;
+ padding-bottom: 50px;
+ }
+ #livesearch{ 
+  margin: 5px;
+  width: 300px;
+  display: none;
+  color:rgb(136, 66, 0);
+  }
+
+#filter{
+ 
+  
+  margin:5px;
+   
+  } 

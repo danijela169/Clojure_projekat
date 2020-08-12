@@ -1,0 +1,157 @@
+body {
+ padding-top: 50px;
+ color:#0E1447;
+}
+img{
+width: 100%; 
+display: block;
+
+}
+h2{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+}
+.lead{
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 400;
+}
+.navbar-brand {
+  padding: 10px;
+  margin:0;
+  color:#FFFFFF;
+}
+.navbar-header a.navbar-brand {
+  color:rgb(158, 236, 15);
+}
+.navbar {
+  border-radius: 0;
+  margin-bottom: 30px;
+  background:	#1D2B36;
+  padding: 20px 0;
+  padding-bottom:0;
+}
+
+ .navbar-nav{
+  margin-top: 5px;
+ }
+
+.navbar-nav>li{
+  margin-left: 35px;
+  padding-bottom: 28px;
+}
+
+.navbar-fixed-top .navbar-nav > li > a {
+  padding: 5px 12px;
+  margin: 0;
+  border-radius: 3px;
+  color: rgb(158, 236, 15);
+  line-height: 24px;
+  display: inline-block;
+  font-size:20px;
+  
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+	background-color:rgb(142, 130, 132);
+  color: #fff;
+}
+
+.navbar-fixed-top {
+  border: none;
+}
+
+.navbar-fixed-top .navbar-brand {
+  font-size: 36px;
+  line-height: 50px;
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav > .active > a,
+.navbar-fixed-top .navbar-nav > .active > a:hover,
+.navbar-fixed-top .navbar-nav > .active > a:focus,
+.navbar-fixed-top .navbar-nav > .open > a,
+.navbar-fixed-top .navbar-nav > .open > a:hover,
+.navbar-fixed-top .navbar-nav > .open > a:focus {
+  background-color: rgba(0,0,0,.85);
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu {
+  background-color: rgba(0,0,0,.85);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  border-top: 0;
+  border-radius: 0;
+  left: 0;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu:before{
+  position: absolute;
+  top:0;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu > li > a {
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu > li:hover > a,
+.navbar-fixed-top .navbar-nav .dropdown-menu > li:focus > a,
+.navbar-fixed-top .navbar-nav .dropdown-menu > li.active > a {
+  background-color: #E8CE0E;
+  color: #fff;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu > li:last-child > a {
+  border-radius: 0 0 3px 3px;
+}
+
+.navbar-fixed-top .navbar-nav .dropdown-menu > li.divider {
+  background-color: transparent;
+}
+
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-top .navbar-form {
+  border-top: 0;
+  padding-bottom: 50px;
+}
+
+#footer {
+position: fixed;
+  left: 0;
+ right:0;
+ bottom:0;
+ width: 100%;
+ padding-top: 20px;
+ padding-bottom: 50px;
+ text-align: initial;
+ color: rgb(158, 236, 15);
+ background:#1D2B36;
+ font-size: 18px;  
+}
+
+	
+
+/* Style all font awesome icons */
+.fa {
+ 
+  padding: 20px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+

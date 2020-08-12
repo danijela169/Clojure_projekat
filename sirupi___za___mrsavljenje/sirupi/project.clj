@@ -3,7 +3,7 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.6.0"]
+:dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/java.jdbc "0.4.2"]
                  [mysql/mysql-connector-java "5.1.38"]
                  [ring/ring "1.7.0"]
@@ -15,4 +15,4 @@
                  [compojure "1.4.0"]
                  [hiccup "1.0.5"]]
   :plugins [[lein-ring "0.12.5"]]
-  :ring { :handler sirupi.core/app})
+  :ring { :handler sirupi.controller/app})
