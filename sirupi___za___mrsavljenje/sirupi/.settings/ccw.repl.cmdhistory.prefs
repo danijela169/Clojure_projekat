@@ -1,0 +1,2 @@
+cmdhistory=["(println (str \\"hello \\" myname))" "(println \\"hello, what is your name?\\")\\r\\n(let [myname (read-line)]\\n  (println (str \\"hello \\" myname)))"]
+eclipse.preferences.version=1
