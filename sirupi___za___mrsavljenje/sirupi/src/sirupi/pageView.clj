@@ -36,6 +36,16 @@
             ]
       ]
      body
-        
-   ]
+         [:footer {:id "footer" :class "midnight-blue"}
+        [:div {:class "container"}
+            [:div {:class "row"}
+              [:div {:class "col-sm-6"}
+                    "Proizvodnja: Beogradska 12, Beograd, Stari grad"[:br]
+                    "Broj telefona: 065 916 1995"[:br]
+                    "Naručivanje 00–24 online ili telefonom, nedeljom ne dostavljamo"[:br]
+                    "sirupizamrsavljenje@gmail.com"[:br][:br]                
+                    "Sirupi za mršavljenje. All Rights Reserved. Snaga prirode."
+               ]
+           ]
+   ]]]
 ))
