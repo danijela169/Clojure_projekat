@@ -22,10 +22,21 @@
    (view/narudzbine (b/data))
   )
 
+(defn izmenaNarudzbine [id sirupid kolicina]
+  (b/updateNarudzbina id sirupid kolicina) 
+  (ring/redirect "/narudzbine")
+  )
+
+
+(defn izmenaNar [id]
+  (view/izmena (b/dataNarudzbine id) (b/dataSirupi))
+  )
 
 (defroutes my_routes
  (GET "/" [] (pocetnaStr))
  (GET "/narudzbine" [] (narudzbine))
+ (GET "/izmena/:id" [id] (izmenaNar id))
+ (POST "/update" [sirupid kolicina id] (izmenaNarudzbine id sirupid kolicina))
  (route/resources "/"))
 
 

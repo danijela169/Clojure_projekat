@@ -46,3 +46,52 @@
                            ] ) data)]
   ]]]]]]  
  ))
+
+(defn izmeniti [narudzbina sirupi]
+   (map 
+      (fn [narudzbina]
+                     (form/form-to [:post "/update"]
+                       (anti-forgery/anti-forgery-field)
+                      [:div {:class "col-md-6"}
+                        [:label {:for "sirup"} "Sirup"]
+                        [:select {:name "sirupid" :class "form-control" :id "sirup" :value (:sirupid narudzbina)}
+                         (map (fn [sirup]
+                                [:option {:value (:sirupid sirup)} (:nazivvrste sirup)]) sirupi)
+                         ]
+                       ]
+
+                      [:div {:class "col-md-12"}
+                        [:label {:for "kolicina"} "Količina"]
+                        [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :value (:kolicina narudzbina)}]
+                     ]
+                      [:div {:class "col-md-12"}
+                        [:label {:for "id" }]
+                        [:input {:type "hidden" :name "id" :class "form-control" :id "kolicina" :value (:narudzbinaid narudzbina)}]
+                      ]
+                      [:div {:class "col-md-12"}
+                        [:label {:for "button"}]
+                        [:input {:type "submit" :class "form-control btn-info" :id "button" :value "Izmeni narudžbinu"}]
+                      ]
+                      )) narudzbina)
+  
+  )
+
+(defn izmena [narudzbina sirupi]
+  (izgledStr/view 
+
+    [:section {:id "narudzbina"}
+         [:div {:class "container"}
+          [:div {:class "center wow fadeInDown"}
+                [:h2 "Izmeni narudžbinu"]
+                 [:p {:class "lead"} "Izmena narudžbine"]
+             ]
+
+             [:div {:class "row"}
+                 [:div  {:class "narudzbine"}
+                (izmeniti narudzbina sirupi)
+                    ]
+                 ]
+            ]
+        ]
+    )
+  )
