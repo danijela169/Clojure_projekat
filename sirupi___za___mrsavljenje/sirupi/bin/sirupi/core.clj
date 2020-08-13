@@ -18,6 +18,15 @@
   )
 
 
+(defn novaNar []
+  (view/novaNarudzbina (b/dataSirupi))
+  )
+
+(defn dodatiNarudzbinu [sirupid kolicina]
+  (b/addNar sirupid kolicina)
+   (ring/redirect "/narudzbine")
+  )
+
 (defn narudzbine []
    (view/narudzbine (b/data))
   )
@@ -34,6 +43,8 @@
 
 (defroutes my_routes
  (GET "/" [] (pocetnaStr))
+ (GET "/novanarudzbina" [] (novaNar))
+ (POST "/add" [sirup kolicina] (dodatiNarudzbinu sirup kolicina))
  (GET "/narudzbine" [] (narudzbine))
  (GET "/izmena/:id" [id] (izmenaNar id))
  (POST "/update" [sirupid kolicina id] (izmenaNarudzbine id sirupid kolicina))

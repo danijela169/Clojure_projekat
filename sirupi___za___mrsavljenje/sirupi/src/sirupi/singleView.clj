@@ -14,6 +14,47 @@
       ]
     ))
 
+
+(defn dodatiNovu [sirupi]
+  (form/form-to [:post "/add"]
+    (anti-forgery/anti-forgery-field)
+      [:div {:class "col-md-6"}
+        [:label {:for "sirup"} "Sirup"]
+         [:select {:name "sirup" :class "form-control" :id "sirup"}
+              (map (fn [sirup]
+                 [:option {:value (:sirupid sirup)} (:nazivvrste sirup)]) sirupi)
+              ]
+         ]
+         [:div {:class "col-md-12"}
+          [:label {:for "kolicina"} "Količina"]
+           [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :placeholder "Količina"}]
+           ]
+         [:div {:class "col-md-12"}
+          [:label {:for "button"} ]
+           [:input {:type "submit" :name "button" :class "form-control btn-info" :id "button" :value "Sačuvaj narudžbinu"}]
+           ]
+  )
+  )
+
+(defn novaNarudzbina [sirupi]
+  (izgledStr/view
+     [:section {:id "narudzbina"}
+     [:div {:class "container"}
+          [:div {:class "center wow fadeInDown"}
+                [:h2 "Dodaj narudžbinu"]
+                 [:p {:class "lead"} "Dodavanje nove narudžbine"]
+             ]
+
+             [:div {:class "row"}
+                 [:div  {:class "narudzbine"}
+                  (dodatiNovu sirupi)
+                  ]
+                 ]
+             ]
+     ]
+    )
+  )
+
 (defn narudzbine [data] 
   (izgledStr/view 
    [:section {:id "narudzbine"}

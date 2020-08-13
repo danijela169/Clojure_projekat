@@ -25,8 +25,8 @@
 
                 [:div {:class "collapse navbar-collapse navbar-right"}
                     [:ul {:class "nav navbar-nav"}
-                     [:li [:a {:href "/narudzbine"} "Narudžbine"]]
                      [:li [:a {:href "/novanarudzbina"} "Dodaj novu narudžbinu"]]
+                     [:li [:a {:href "/narudzbine"} "Narudžbine"]]
                      [:li [:a {:href "/pretraganar"} "Pretraži narudžbine po vrsti sirupa"]]
                    
 					
