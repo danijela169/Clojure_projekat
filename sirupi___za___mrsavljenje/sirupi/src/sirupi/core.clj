@@ -42,6 +42,15 @@
   )
 
 
+(defn pretraganar [rezultatPret rez]
+  (if (= rez "")
+    (do (view/pretraganar rezultatPret rez ""))
+    (view/pretraganar rezultatPret rez (b/dataSearch rez)
+      ))
+  
+  )
+
+
 (defroutes my_routes
  (GET "/" [] (pocetnaStr))
  (GET "/novanarudzbina" [] (novaNar))
@@ -49,6 +58,8 @@
  (GET "/narudzbine" [] (narudzbine))
  (GET "/izmena/:id" [id] (izmenaNar id))
  (POST "/update" [sirupid kolicina id] (izmenaNarudzbine id sirupid kolicina))
+ (GET "/pretraganar" [] (pretraganar false ""))
+ (POST "/pretraganar" [rez] (pretraganar true rez))
  (route/resources "/"))
 
 

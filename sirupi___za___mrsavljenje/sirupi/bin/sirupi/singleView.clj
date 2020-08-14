@@ -136,3 +136,73 @@
     )
   )
 
+(defn rezultat [dataSearch]
+  [:div {:id "tabela" :class "col-md-12"}
+   [:table {:class "table table-hover"}
+   [:thead
+     [:tr
+       [:th "Sirup"]
+       [:th "Cena sirupa po komadu"]
+       [:th "Naručena količina"]
+       [:th "Ukupna cena narudžbine"]
+     ]
+   ]
+    [:tbody
+      [:tr 
+        (map 
+          (fn [singleData]
+            [:tr
+             [:td (:nazivvrste singleData)]
+             [:td (:cenasirupa singleData)]
+             [:td (:kolicina singleData)] 
+             [:td (* (:cenasirupa singleData) (:kolicina singleData))]
+            ] ) dataSearch)]
+   ]
+]]
+  )
+
+ 
+(defn pretraganar [svi rezultati dataSearch] 
+  (izgledStr/view
+     [:section {:id "narudzbina"}
+     [:div {:class "container"}
+          [:div {:class "center wow fadeInDown"}
+                [:h2 "Sirupi"]
+                 [:p {:class "lead"} "Pretraga po vrsti sirupa"]
+             ]
+     [:div {:class "row"}
+     [:div  {:class "narudzbine"}
+
+		(form/form-to [:post "/pretraganar"]
+    (anti-forgery/anti-forgery-field)
+     [:div {:class "col-md-12"}
+      
+   [:input {:clas "form-control" :id "rez" :name "rez" :placeholder "Nazivu vrste sirupa" :value rezultati}]
+   ]
+      [:div {:class "col-md-12"}
+   [:label {:for "button"}]
+   [:button {:class "btn btn-info form-control":type "submit" :name "button"} "Pretraži sirupe"]
+  ]
+  )
+  (if (= svi true) 
+    (do (rezultat dataSearch)))
+  ]]]]
+))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
