@@ -27,8 +27,7 @@
          ]
          [:div {:class "col-md-12"}
           [:label {:for "kolicina"} "Količina"]
-           [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :placeholder "Količina"}]
-           ]
+           [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :min "1" :value (:kolicina sirupi) :placeholder "Količina"}]]
          [:div {:class "col-md-12"}
           [:label {:for "button"} ]
            [:input {:type "submit" :name "button" :class "form-control btn-info" :id "button" :value "Sačuvaj narudžbinu"}]
