@@ -103,7 +103,7 @@
 
                       [:div {:class "col-md-12"}
                         [:label {:for "kolicina"} "Količina"]
-                        [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :value (:kolicina narudzbina)}]
+                        [:input {:type "number" :name "kolicina" :class "form-control" :id "kolicina" :min "1" :value (:kolicina narudzbina)}]
                      ]
                       [:div {:class "col-md-12"}
                         [:label {:for "id" }]
