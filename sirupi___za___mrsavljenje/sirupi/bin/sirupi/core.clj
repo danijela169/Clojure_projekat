@@ -50,6 +50,10 @@
   )
 
 
+(defn deleteNar [id]
+  (b/deleteNar id)
+  (ring/redirect "/narudzbine")
+  )
 
 (defroutes my_routes
  (GET "/" [] (pocetnaStr))
@@ -60,6 +64,7 @@
  (POST "/update" [sirupid kolicina id] (izmenaNarudzbine id sirupid kolicina))
  (GET "/pretraganar" [] (pretraganar false ""))
  (POST "/pretraganar" [rez] (pretraganar true rez))
+ (GET "/deleteNar/:id" [id] (deleteNar id))
  (route/resources "/"))
 
 

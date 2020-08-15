@@ -82,7 +82,7 @@
                                 [:td (:kolicina singleData)]
                                 [:td (.toString (:datumpreuzimanja singleData))] 
                                 [:td [:a {:class "btn btn-info" :href (str "/izmena/" (h (:narudzbinaid singleData)))} "Izmenite narudžbinu" ]]
-                                [:td [:a {:class "btn btn-danger" :href (str "/obrisi/" (h (:narudzbinaid singleData)))} "Obrišite narudžbinu" ]]
+                                [:td [:a {:class "btn btn-danger" :href (str "/deleteNar/" (h (:narudzbinaid singleData)))} "Obrišite narudžbinu" ]]
                            ] ) data)]
   ]]]]]]  
  ))
@@ -110,7 +110,7 @@
                       ]
                       [:div {:class "col-md-12"}
                         [:label {:for "button"}]
-                        [:input {:type "submit" :class "form-control btn-info" :id "button" :value "Izmeni narudžbinu"}]
+                        [:input {:type "submit" :class "form-control btn-info" :id "button" :value "Izmenite narudžbinu"}]
                       ]
                       )) narudzbina)
   
@@ -122,7 +122,7 @@
     [:section {:id "narudzbina"}
          [:div {:class "container"}
           [:div {:class "center wow fadeInDown"}
-                [:h2 "Izmeni narudžbinu"]
+                [:h2 "Izmenite narudžbinu"]
                  [:p {:class "lead"} "Izmena narudžbine"]
              ]
 
@@ -154,7 +154,7 @@
             [:tr
              [:td (:nazivvrste singleData)]
              [:td (:cenasirupa singleData)]
-             [:td (:kolicina singleData)] 
+             [:td (:kolicina  singleData)] 
              [:td (* (:cenasirupa singleData) (:kolicina singleData))]
             ] ) dataSearch)]
    ]
@@ -188,6 +188,7 @@
     (do (rezultat dataSearch)))
   ]]]]
 ))
+
 
 
 
