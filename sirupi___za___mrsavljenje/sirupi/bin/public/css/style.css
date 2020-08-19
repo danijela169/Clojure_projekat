@@ -1,0 +1,315 @@
+body {
+    margin: 0;
+    position: relative;
+    background-color: white;
+    }
+    
+header{
+	position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+	
+}
+th{
+  text-align: left;
+}
+h2{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5px;
+  font-family: "Poppins";
+  color: #595959;
+  font-weight: bolder;
+}
+.container-narudzbina{
+  min-height: 550px;
+}
+.col{
+  display: inline;
+}
+.pan{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.row{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container{
+display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 50px;
+    line-height: 50px;
+    font-family: "Poppins";
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+    padding-left: 30px;
+    position: relative;
+    top: 100px;
+    min-height: 450px;
+    background-color: white;
+    color: #8C8C8C;
+    min-height: 550px;
+}
+.navbar-container{
+	    display: flex;
+}
+.narudzbine{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+
+}
+.lead{
+  font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    font-family: "Poppins";
+    font-style: italic;
+    color: #8C8C8C;
+}
+.navbar-brand {
+  padding: 10px;
+  margin:0;
+  color:#FFFFFF;
+}
+.navbar-toggle{
+    background-color: transparent;
+    border: none;}
+.navbar-header a.navbar-brand {
+	    display: flex;
+    color: #ffffff;
+    font-family: "Poppins";
+    font-size: 30px;
+    margin: 20px;
+        text-decoration: none;
+    
+}
+
+.navbar-header{
+	            width: 40%;
+	
+}
+.navbar {
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #FD4C6C;
+}
+
+ .navbar-nav{
+  display: flex;
+    font-family: "Poppins";
+    font-size: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+     }
+
+.navbar-nav>li{
+display: flex;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.navbar-fixed-top .navbar-nav > li > a {
+    text-decoration: none;
+    color: #E6E6E6;
+  
+}
+
+.navbar-fixed-top .navbar-nav > li > a:hover{
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+
+}
+
+
+.table-hover{
+  display: flex;
+  font-family: "Poppins";
+  width: 100%;
+  display: table;
+  width: 100%; 
+   max-width: 100%;
+  margin-bottom: 20px;
+  padding: 50px;
+  border-spacing: 0px;
+
+
+
+}
+td{
+  border-bottom: 1px solid #595959;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  font-size: 14px;
+}
+.btn-info{
+  text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 13px;
+    background-color: #FD4C6C;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.55);
+
+}
+
+.btn-danger{
+  text-decoration: none;
+    color: white;
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 13px;
+    background-color: #193153;
+    box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.55);
+  
+}
+
+.btn-info:active, .btn-danger:active{
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+  box-shadow: 5px 5px 40px 0px rgba(0,0,0,0.55);
+
+
+}
+
+tr{
+  color: #595959;
+
+}
+.container-update{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+
+}
+.btn-info.form-control{
+  border: none;
+  margin-top: 100px;
+  position: relative;
+}
+
+#button.form-control.btn-info {
+  border: none;
+  margin-top: 100px;
+  position: relative;
+
+
+}
+input#kolicina.form-control{
+  width: 70px;
+  text-align: center;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+}
+
+select#sirup.form-control{
+  font-size: 14px;
+    font-family: "Poppins";
+    color: #444;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    width: 100px;
+    box-sizing: border-box;
+    margin: 0;
+    border: 1px solid #aaa;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+
+label{
+  display: inline-flex;
+  padding: 20px 20px;
+  width: 100px;
+}
+
+
+
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-top .navbar-form {
+	    width: 100%;
+    display: flex;
+    align-content: space-between;
+
+}
+.text-on-page{
+	    width: 50%;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+#footer {
+    width: 100%;
+    height: 150px;
+    letter-spacing: 2px;
+    padding-top: 20px;
+    padding-left: 30px;
+    background: #E6E6E6;
+    font-size: 14px;
+    color: #FD4C6C;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: left;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    bottom: 0px;
+  
+}
+
+.pretraga{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa {
+ 
+  padding: 20px;
+  font-size: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+.image-smoothie{
+width: 300px;
+    height: 300px;
+    padding-top: 80px;
+    padding-left: 50px;}
+
+

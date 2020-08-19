@@ -41,6 +41,7 @@
   (view/izmena (b/dataNarudzbine id) (b/dataSirupi))
   )
 
+
 (defn pretraganar [rezultatPret rez]
   (if (= rez "")
     (do (view/pretraganar rezultatPret rez ""))
@@ -66,6 +67,5 @@
  (POST "/pretraganar" [rez] (pretraganar true rez))
  (GET "/deleteNar/:id" [id] (deleteNar id))
  (route/resources "/"))
-
 
 
