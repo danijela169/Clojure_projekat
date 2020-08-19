@@ -26,7 +26,7 @@
    (into [] (sql/query connection ["SELECT * FROM sirup"])))
 
 (defn dataSearch [rez]
-  (into [] (sql/query connection ["SELECT *, SUM(narudzbina.kolicina) as broj FROM narudzbina, sirup WHERE narudzbina.sirupID = sirup.sirupID && sirup.nazivVrste LIKE ? group by sirup.sirupID" (str "%" rez "%")]))
+  (into [] (sql/query connection ["SELECT * FROM narudzbina, sirup WHERE narudzbina.sirupID = sirup.sirupID && sirup.nazivVrste LIKE ?"(str "%" rez "%")]))
   )
 
 (defn addNar [sirupid kolicina]
